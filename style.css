@@ -1,0 +1,263 @@
+/*remember that comments are like this*/
+body {
+	background: #130900;
+	/*background-image: url("http://g2.dcdn.lt/images/pix/vytautas-sustauskas-72705862.jpg");*/
+	font-family:  'Montserrat', sans-serif;
+	color: #ffffff;
+	text-align: center;
+	cursor:default;
+}
+
+#header{
+	border-color: #121212;
+	border-style: hidden;
+	position: absolute;
+	top: 60%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+
+}
+
+#afterClick{
+	font-size: 40px;
+	padding: 42px;
+}
+
+#beta{
+	font-size: 10px;
+	opacity: 0.2;
+}
+
+#bottom{
+	padding: 20px;
+	
+
+
+}
+
+#my-btn{
+	
+}
+
+/*#my-btn:hover {
+	background-color: #fff;
+	color: #130900;
+	transition:0.4s
+
+}*/
+
+h1{
+	font-weight:  bold;	
+	margin: 10px;
+	font-size: 50px;
+
+	line-height: 104%;
+}
+@media(max-width:1000px){h1{font-size:300%;}}
+
+#secondText{
+	display: none;
+}
+p {
+	color: #404040;
+	margin: 10px;
+	font-size: 10px;
+}
+
+.whitetext{
+	color: #606060;
+	font-weight: bold;
+}
+*, *:after, *::before {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+
+/* General styles for all types of buttons */
+.progress-button {
+	position: relative;
+	display: inline-block;
+	outline: none;
+	border: none;
+	color: #fff;
+	padding: 20 px;
+	line-height: 1;
+	font-family:  'Montserrat', sans-serif;
+	padding: 20px;
+	text-decoration: none;
+	border: 2px solid;
+	border-color: #ffffff;
+	color: #ffffff;
+	font-size: 25px;
+	border-radius: 8px;
+	transition:0.4s;
+	outline: none;
+	margin: 20px;
+	margin: 20px;
+	background: #130900;
+}
+
+.progress-button:hover{
+	background: #fff;
+	color: #130900;
+	cursor: pointer;
+}
+
+.progress-button[disabled],
+.progress-button[disabled].state-loading {
+	cursor: wait;
+}
+
+
+
+.progress-button.state-loading:hover{
+	background-color:  #130900;
+	color: #fff;
+	
+}
+
+.progress-button .content {
+	position: relative;
+	display: block;
+}
+
+.progress-button .content::before,
+.progress-button .content::after  {
+	position: absolute;
+	right: 20px;
+	color: #0e7138;
+	opacity: 0;
+	-webkit-transition: opacity 0.3s 0.3s;
+	transition: opacity 0.3s 0.3s;
+}
+.please-kill-me {
+	width:50%;
+	height:auto;
+}
+
+.progress-button.response1 .content::before {
+	content: "Paprašykit Jono";
+	white-space:nowrap;
+}
+
+.progress-button.response2 .content::before {
+	content: "Eikit dirbt";
+	white-space:nowrap;
+}
+
+.progress-button.response3 .content::before {
+	content: "Gal geriau papus?";
+	white-space:nowrap;
+}
+
+.progress-button.response4 .content::before {
+	content: "Merginos vis dar be batų";
+	white-space:nowrap;
+}
+
+.progress-button.state-success .content::before,
+.progress-button.state-error .content::after {
+	opacity: 1;
+}
+
+.notransition {
+	-webkit-transition: none !important;
+	transition: none !important;
+}
+
+.progress-button .progress {
+	background: #ff6100;
+
+}
+
+.progress-button .progress-inner {
+	position: absolute;
+	left: 0;
+	background: #0e7138;
+}
+
+.progress-button[data-horizontal] .progress-inner {
+	top: 0;
+	width: 0;
+	height: 100%;
+	-webkit-transition: width 0.3s, opacity 0.3s;
+	transition: width 0.3s, opacity 0.3s;
+
+	
+}
+
+
+
+/* Individual styles */
+/* Choose the effect(s) you want, delete the rest */
+
+/* Fill horizontal */
+/* ====================== */
+
+.progress-button[data-style="fill"][data-horizontal] {
+	overflow: hidden;
+}
+
+.progress-button[data-style="fill"][data-horizontal] .content {
+	z-index: 10;
+	-webkit-transition: -webkit-transform 0.3s;
+	transition: transform 0.3s;
+	
+}
+
+
+.progress-button[data-style="fill"][data-horizontal] .content::before,
+.progress-button[data-style="fill"][data-horizontal] .content::after {
+	top: 100%;
+	right: auto;
+	left: 44%;
+	color: #fff;
+	-webkit-transition: opacity 0.3s;
+	transition: opacity 0.3s;
+	-webkit-transform: translateX(-40%);
+	transform: translateX(-40%);
+	
+	
+	
+}
+
+.progress-button[data-style="fill"][data-horizontal] .content:hover::before,
+.progress-button[data-style="fill"][data-horizontal] .content:hover::after{
+	color: #101010;
+}
+
+
+
+
+.progress-button[data-style="fill"][data-horizontal].state-success #mainText,
+.progress-button[data-style="fill"][data-horizontal].state-error #mainText {
+	opacity: 0;
+	transition: opacity 0.3s;
+}
+
+
+
+.progress-button[data-style="fill"][data-horizontal].state-success .content,
+.progress-button[data-style="fill"][data-horizontal].state-error .content {
+	-webkit-transform: translateY(-100%);
+	transform: translateY(-100%);
+	
+	
+}
+
+a{
+	color: #fff;
+	text-decoration: none;
+}
+
+.link{
+	color: #fff;
+}
+
+.link:hover{
+	text-decoration: underline;
+	color: #fff;
+	cursor: pointer;
+}
